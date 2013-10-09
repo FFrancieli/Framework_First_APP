@@ -5,6 +5,7 @@
 <p> <b>  Idade: </b> <%= @user.age%></p>
 <p> <b>  Sexo: </b> <%= @user.gender%></p>
 
+  
 	<% bill = Bill.new %>
 	<%= div_for bill do %>
 		<%= render partial: 'bills/new', locals: {bill: Bill.new, user: @user} %>

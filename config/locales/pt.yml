@@ -38,7 +38,6 @@ pt:
       messages:
         inclusion: "não é um valor válido"
         exclusion: "não está disponível"
-        error: erro
         invalid: "não é válido"
         confirmation: "não está de acordo com a confirmação"
         accepted: "deve ser aceito"
@@ -63,7 +62,10 @@ pt:
     models:
       bill:
         one: Conta
-        other: contas
+        other: Contas
+      user:
+        user: Usuário
+        users: Usuários
 
     attributes:
       bill:
