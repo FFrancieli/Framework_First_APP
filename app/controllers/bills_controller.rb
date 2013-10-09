@@ -9,10 +9,24 @@ class BillsController < ApplicationController
     @bill = Bill.find(params[:id])
     @bill.destroy
   end
+
+  def edit
+    @bill = Bill.find(params[:id])
+  end 
+
+  def update
+    @bill = Bill.find(params[:id])
+    flash[:notice] = (@bill.update_attributes(bill_params) ? t('saved_successfully') : ('error_while_saving'))
+  end
+
+
+
   private 
 
     def bill_params
       params.require(:bill).permit(:name, :description, :date, :value, :user_id)
     end
+
+
 
 end
