@@ -64,8 +64,8 @@ pt:
         one: Conta
         other: Contas
       user:
-        user: Usuário
-        users: Usuários
+        one: Usuário
+        other: Usuários
 
     attributes:
       bill:

@@ -54,6 +54,8 @@ end
 gem 'rails_12factor', group: :production
 gem 'devise'
 gem 'mailcatcher'
+gem 'debugger'
+gem 'factory_girl_rails'
 
 group :test do 
 	gem 'capybara'
