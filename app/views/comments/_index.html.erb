@@ -1,0 +1,16 @@
+<div id="commentable_<%= commentable.class %>_<%= commentable.id %>">
+
+
+  <% if commentable.comments.any? %>
+    <% commentable.comments.each do |comment| %>
+      <blockquote>
+        <p><%= comment.content %></p>
+      </blockquote>
+    <% end %>
+  <% else %>
+    Não há comentários
+  <% end %>
+
+  <br>
+  <%= link_to 'Novo comentário', new_comment_path(commentable_type: commentable.class, commentable_id: commentable.id), class: 'btn btn-primary', remote: true %>
+</div>

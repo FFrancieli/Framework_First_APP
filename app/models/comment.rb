@@ -11,5 +11,4 @@ class Comment < ActiveRecord::Base
   #Associations
   belongs_to :commentable, polymorphic: true
 
-
 end

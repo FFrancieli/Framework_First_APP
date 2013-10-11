@@ -5,6 +5,10 @@
 <p> <b>  Idade: </b> <%= @user.age%></p>
 <p> <b>  Sexo: </b> <%= @user.gender%></p>
 
+<h3>Comentários</h3>
+
+<%=  render partial: 'comments/index', locals: {commentable: @user}%>
+
   
 	<% bill = Bill.new %>
 	<%= div_for bill do %>
@@ -16,4 +20,4 @@
 </div>
 
 <%= link_to 'Editar', edit_user_path(@user), :class => 'btn'%>
-<%= link_to 'Voltar', users_path(), :class => 'btn'%>
+<%= link_to 'Voltar', users_path(commentable_type: 'User', commentable_id: @user.id), :class => 'btn', remote: true%>

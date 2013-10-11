@@ -16,5 +16,7 @@ FirstApp::Application.routes.draw do
       post 'create_bill'
     end
   end
+
+  resources :comments
   	
 end 

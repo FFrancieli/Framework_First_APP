@@ -3,6 +3,12 @@
       <%=bill.description %>
       <h5><%= l(bill.date, format: :long) %></h5>
       <h3><%= bill.value.round(2) %></h3>
+
+      <h3>Comentários</h3>
+      <%=  render partial: 'comments/index', locals: {comments: bill.comments}%>
+      <br/>
+      <%= link_to 'Novo comentário', new_comment_path(commentable_type: 'Bill', commentable_id: bill.id), class: 'btn btn-primary', remote: true %>
+
  
       <%= link_to 'Editar', edit_user_bill_path(bill.user, bill), class: 'btn btn-primary', remote: true%>
       <%= link_to 'Remover', [bill.user,bill], class: 'btn btn-danger', remote: true, method: :delete %>

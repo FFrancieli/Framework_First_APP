@@ -1,0 +1,7 @@
+<% if @comment.persisted? %>
+<% index_context = j(render partial: 'comments/index', locals:{commentable: @comment.commentable}) %>
+  $("#commentable_<%= @comment.commentable.class %>_<%= @comment.commentable.id %>").replace("<%= index_context %>")
+  $("#modal-comments").modal('hide')
+<% else %>
+
+<% end %>
