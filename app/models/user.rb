@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
 	validates :email, :presence => true, :allow_blank => false
 	validates :gender, :presence => true, :if => :adulthood
 	validates :email, uniqueness: true
+  has_many :comments, as: :commentable
 
 	#Associations
 	has_many :bills, :dependent => :destroy

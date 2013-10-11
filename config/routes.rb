@@ -10,5 +10,11 @@ FirstApp::Application.routes.draw do
   resources :users do 
   	resources :bills
   end
+
+  resources :bills do 
+    collection do
+      post 'create_bill'
+    end
+  end
   	
 end 

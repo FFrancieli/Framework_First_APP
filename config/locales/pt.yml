@@ -1,6 +1,6 @@
 pt: 
   hello: "Olá, Bom dia!"
-  no_bills: "Não há contas para este usário!"
+  no_bills: "Não há contas para este usuário!"
   new_bill: Nova conta
   saved_successfully: "Conta salva com com sucesso"
   error_while_saving: "Erro ao salvar."
