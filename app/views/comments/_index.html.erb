@@ -3,9 +3,7 @@
 
   <% if commentable.comments.any? %>
     <% commentable.comments.each do |comment| %>
-      <blockquote>
-        <p><%= comment.content %></p>
-      </blockquote>
+      <%= render comment %>
     <% end %>
   <% else %>
     Não há comentários
